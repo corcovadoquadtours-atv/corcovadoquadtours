@@ -1,0 +1,132 @@
+:root {
+    --primary: #2ecc71;
+    --dark: #1e272e;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #111;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo span { color: var(--primary); font-weight: bold; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { color: white; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; text-transform: uppercase; }
+.hero-content p { font-size: 1.2rem; margin-bottom: 40px; max-width: 700px; margin-inline: auto; }
+
+/* CONTACT INFO BOX (HERO) */
+.hero-contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.email-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.email-display a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.email-display a:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* CARDS SECTION */
+.services { padding: 100px 5%; background: #f9f9f9; text-align: center; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+.card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
+.card img { width: 100%; height: 250px; object-fit: cover; }
+.card-info { padding: 25px; }
+.price { color: var(--primary); font-weight: bold; font-size: 1.4rem; display: block; margin-top: 10px; }
+
+.btn-card {
+    display: inline-block;
+    margin-top: 15px;
+    background: var(--dark);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* CONTACT SECTION */
+.contact { padding: 100px 5%; background: var(--dark); color: white; text-align: center; }
+.methods { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+.method-box { color: white; text-decoration: none; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; min-width: 250px; }
+.method-box i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+
+footer { padding: 30px; background: #000; color: #555; text-align: center; border-top: 1px solid #222; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .email-display { font-size: 1rem; }
+}
